@@ -1,12 +1,6 @@
 <div class="container">
     <div class="row">
-        <p class="title"> Product ING</p>  
-        <!-- <ul>
-            <li class="col-xs-12 product-bullet" ng-repeat="x in productGroupList">{{x.productGroupName}} | {{x.productList.length}}
-                <span class="col-xs-12" ng-repeat="inner in x.productList">{{inner.productName}}</span>
-            </li>
-        </ul> -->   
-
+        <p class="title">Product ING</p>  
         <div class="accordianContainer">
             <div class="panel-group" ng-repeat="x in productGroupList">
                 <div class="panel panel-default">
@@ -16,11 +10,54 @@
                     </h4>
                 </div>
                 <div id="{{x.productGroupName}}" class="panel-collapse collapse">
-                    <div class="panel-body" ng-repeat="inner in x.productList"><a href="#">{{inner.productName}}</a></div>
+                    <div class="panel-body" ng-repeat="inner in x.productList"><a href="#" ng-click="selectedProduct($event)" id="1">{{inner.productName}}</a></div>
                 </div>
                 </div>
             </div> 
         </div>    
 
     </div>
+
+    <div class="row">
+        <p class="title" class="col-xs-12">Product Details</p>  
+        <div class="productDescContainer">
+            <div class="productDetailHeader">
+                <h4>Selected Product Group</h4>
+                <span>Selected product Name</span>
+            </div>
+            <div class="productDetailDesc">
+               <div class="col-sm-1 grid-heading">Product name</div>
+               <div class="col-sm-1 grid-heading">Interest rate</div>
+               <div class="col-sm-1 grid-heading">Percentage</div>
+               <div class="col-sm-2 grid-heading">special</div>
+               <div class="col-sm-2 grid-heading">put in and withdrawel</div>
+               <div class="col-sm-1 grid-heading">minimal investment</div>
+               <div class="col-sm-2 grid-heading">max investment</div>
+               <div class="col-sm-2 grid-heading">duration</div>
+       
+               <div ng-controller="overviewCtrl">
+                    <div ng-repeat="pl in productDataList">
+                       <div class="col-sm-1 grid-data">new</div>
+                       <div class="col-sm-1 grid-data">new</div>
+                       <div class="col-sm-1 grid-data">new</div>
+                       <div class="col-sm-2 grid-data">new</div>
+                       <div class="col-sm-2 grid-data">new</div>
+                       <div class="col-sm-1 grid-data">new</div>
+                       <div class="col-sm-2 grid-data">new</div>
+                       <div class="col-sm-2 grid-data">new</div>
+                   </div>
+               </div>
+            </div>
+            <div class="otherGroupProducts">
+                <h4>Other Group Products</h4>
+                <ul>
+                    <li><a href="#">Product Name 1</a></li>
+                    <li><a href="#">Product Name 2</a></li>
+                    <li><a href="#">Product Name 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
 </div>

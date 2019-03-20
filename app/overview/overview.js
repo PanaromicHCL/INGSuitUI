@@ -22,4 +22,8 @@ angular.module('myApp.overview', ['ngRoute'])
     //     //     alert("Data has been submitted successfully:" + JSON.stringify(response));
     //     // });
     // }
+
+    $scope.selectedProduct = function($event) {
+      console.log("Selected Product:" + $event.target.id);
+    }
 });
