@@ -5,3 +5,19 @@ ul {
 .product-bullet {
     list-style-type: decimal;
 }
+
+.accordianContainer {
+    padding: 20px;
+}
+
+.panel-default>.panel-heading {
+    background-color:  #ffa872;
+}
+
+.panel-title {
+    color: #fff;
+}   
+
+.panel-body > a {
+    color: #ff6200;
+}

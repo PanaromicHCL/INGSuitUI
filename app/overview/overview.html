@@ -5,20 +5,22 @@
             <li class="col-xs-12 product-bullet" ng-repeat="x in productGroupList">{{x.productGroupName}} | {{x.productList.length}}
                 <span class="col-xs-12" ng-repeat="inner in x.productList">{{inner.productName}}</span>
             </li>
-        </ul> -->
+        </ul> -->   
 
-        <div class="panel-group" ng-repeat="x in productGroupList">
-            <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                <a data-toggle="collapse" href="#{{x.productGroupName}}">{{x.productGroupName}} | {{x.productList.length}}</a>
-                </h4>
-            </div>
-            <div id="{{x.productGroupName}}" class="panel-collapse collapse" ng-repeat="inner in x.productList">
-                <div class="panel-body">{{inner.productName}}</div>
-            </div>
-            </div>
-        </div>     
+        <div class="accordianContainer">
+            <div class="panel-group" ng-repeat="x in productGroupList">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#{{x.productGroupName}}">{{x.productGroupName}} | {{x.productList.length}}</a>
+                    </h4>
+                </div>
+                <div id="{{x.productGroupName}}" class="panel-collapse collapse">
+                    <div class="panel-body" ng-repeat="inner in x.productList"><a href="#">{{inner.productName}}</a></div>
+                </div>
+                </div>
+            </div> 
+        </div>    
 
     </div>
 </div>
