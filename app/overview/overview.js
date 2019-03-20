@@ -8,15 +8,9 @@ angular.module('myApp.overview', ['ngRoute'])
 }])
 
 .controller('overviewCtrl', function($scope, $http, $window) {
-    // $scope.productGroupList = dataService.productGrpList;
-
-    // $scope.productGroupList = dataService.getProductGroups();
-
     $http.get(APP_BASE_URL + "/getProductGroups")
     .then(function(response) {
-        // alert("Data has been Fetched successfully:" + JSON.stringify(response.data));
         $scope.productGroupList  = response.data;
-        // alert("Data:" +  this.productGroupList);
     });
 
     // console.log("Products List:" + $scope.productGroupList);
@@ -37,5 +31,10 @@ angular.module('myApp.overview', ['ngRoute'])
 
     $scope.selectedProduct = function($event) {
       console.log("Selected Product:" + $event.target.id);
+      $http.get(APP_BASE_URL + "/getProductDetail/" + $event.target.id)
+      .then(function(response) {
+        // alert("Data has been submitted successfully:" + JSON.stringify(response.data));
+          $scope.productDetailData = response.data;
+      });
     }
 });

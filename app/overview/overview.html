@@ -6,11 +6,11 @@
                 <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                    <a data-toggle="collapse" href="{{x.productGroupName}}">{{x.productGroupName}}| {{x.product.length}}</a>
+                    <a data-toggle="collapse" href="#{{x.productGroupName}}" target="_self">{{x.productGroupName}}| {{x.product.length}}</a>
                     </h4>
                 </div>
-                <div id="{{x.productGroupName}}" class="panel-collapse ">
-                    <div class="panel-body" ng-repeat="inner in x.product"><a href="#" ng-click="selectedProduct($event)" id="1">{{inner.productName}}</a></div>
+                <div id="{{x.productGroupName}}" class="panel-collapse collapse">
+                    <div class="panel-body" ng-repeat="inner in x.product"><a href="#productData" target="_self" ng-click="selectedProduct($event)" id="{{inner.productId}}">{{inner.productName}}</a></div>
                 </div>
                 </div>
             </div> 
@@ -18,7 +18,7 @@
 
     </div>
 
-    <div class="row">
+    <div class="row" id="productData">
         <p class="title" class="col-xs-12">Product Details</p>  
         <div class="productDescContainer">
             <div class="productDetailHeader">
@@ -51,9 +51,9 @@
             <div class="otherGroupProducts">
                 <h4>Other Group Products</h4>
                 <ul>
-                    <li><a href="#">Product Name 1</a></li>
-                    <li><a href="#">Product Name 2</a></li>
-                    <li><a href="#">Product Name 3</a></li>
+                    <li><a href="#" target="_self">Product Name 1</a></li>
+                    <li><a href="#" target="_self">Product Name 2</a></li>
+                    <li><a href="#" target="_self">Product Name 3</a></li>
                 </ul>
             </div>
         </div>
