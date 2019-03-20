@@ -1,5 +1,7 @@
 'use strict';
 
+var APP_BASE_URL = "http://13.233.244.181:8083/INGSuite/api";
+
 // Declare app level module which depends on views, and core components
 angular.module('myApp', [
   'ngRoute',
@@ -13,7 +15,7 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
 }]).
 controller('mainCtrl', function($scope, $window){
   $scope.scrollTop = function() {
-    console.log("Process");
+    // console.log("Process");
     $window.scrollTo(0, 0);
   }
 });

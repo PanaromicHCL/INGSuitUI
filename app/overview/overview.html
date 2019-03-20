@@ -2,15 +2,15 @@
     <div class="row">
         <p class="title">Product ING</p>  
         <div class="accordianContainer">
-            <div class="panel-group" ng-repeat="x in productGroupList">
+            <div class="panel-group" ng-repeat="x in productGroupList | filter: {productGroupId: '!0'}">
                 <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                    <a data-toggle="collapse" href="#{{x.productGroupName}}">{{x.productGroupName}} | {{x.productList.length}}</a>
+                    <a data-toggle="collapse" href="{{x.productGroupName}}">{{x.productGroupName}}| {{x.product.length}}</a>
                     </h4>
                 </div>
-                <div id="{{x.productGroupName}}" class="panel-collapse collapse">
-                    <div class="panel-body" ng-repeat="inner in x.productList"><a href="#" ng-click="selectedProduct($event)" id="1">{{inner.productName}}</a></div>
+                <div id="{{x.productGroupName}}" class="panel-collapse ">
+                    <div class="panel-body" ng-repeat="inner in x.product"><a href="#" ng-click="selectedProduct($event)" id="1">{{inner.productName}}</a></div>
                 </div>
                 </div>
             </div> 
