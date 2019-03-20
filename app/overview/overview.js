@@ -7,7 +7,7 @@ angular.module('myApp.overview', ['ngRoute'])
   });
 }])
 
-.controller('overviewCtrl', function($scope, $http) {
+.controller('overviewCtrl', function($scope, $http, $window) {
     $scope.productGroupList = products;
     console.log("Products List:" + $scope.productGroupList);
     //     // $http.get("http://10.117.189.212:8081/ISmart/api/makeTransaction" + paymentObject)

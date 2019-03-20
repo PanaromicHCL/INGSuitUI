@@ -10,4 +10,10 @@ angular.module('myApp', [
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('');
   $routeProvider.otherwise({redirectTo: '/overview'});
-}]);
+}]).
+controller('mainCtrl', function($scope, $window){
+  $scope.scrollTop = function() {
+    console.log("Process");
+    $window.scrollTo(0, 0);
+  }
+});

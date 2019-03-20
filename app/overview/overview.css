@@ -19,7 +19,7 @@ ul {
 }   
 
 .panel-body > a {
-    color: #ff6200;
+    color: #777777;
 }
 
 .productDescContainer {
@@ -53,33 +53,15 @@ ul {
 }
 
 .otherGroupProducts ul > li, a {
-    color: #ff6200;
+    color:#777777;
     list-style-type: decimal;
 }
 
 .otherGroupProducts a:hover {
-    color: #ff6200;
+    color:#777777;
 }
 
 .productDescContainer > div {
     margin: 0 0 30px 0;
 }
 
-.grid-heading {
-    text-align: center;
-    border: 1px solid #f3eeee;
-    font-size: 14px;
-    border-radius: 3px;
-    background-color: #ff9552;
-    min-height: 70px;
-    color: #ffffff;
-}
-
-.grid-data {
-    text-align: center;
-    border: 1px solid #f3eeee;
-    font-size: 14px;
-    border-radius: 3px;
-    color: #ff6200;
-    padding: 10px;
-}

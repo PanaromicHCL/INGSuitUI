@@ -1,0 +1,26 @@
+<div class="container" id="monitoringData">
+        <div class="row"> 
+            <p class="title">Monitoring Screen</p> 
+            <div class="col-sm-4 grid-heading">Overview Page Visited</div>
+            <div class="col-sm-4 grid-heading">Selected Product Groups</div>
+            <div class="col-sm-4 grid-heading">Performance, alert signal at 500 requests</div>
+    
+            <div ng-controller="monitoringCtrl">
+                <!-- <div ng-repeat="pl in petsList"> -->
+                    <div class="col-sm-4 grid-data">{{$index + 1}}</div>
+                    <div class="col-sm-4 grid-data">
+                        <!-- <ul>
+                            <li ng-repeat="x in productGroupList">{{x.productGroupName}}</li>
+                        </ul> -->
+                        <div class="productAnalytics" ng-repeat="x in productGroupList"> 
+                            <span class="col-xs-1">{{$index + 1}}.</span>
+                            <span class="col-xs-8">{{x.productGroupName}}</span>
+                            <span class="col-xs-3">Count</span>    
+                        </div>
+                    </div>
+                    <div class="col-sm-4 grid-data">{{$index + 1}}</div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    

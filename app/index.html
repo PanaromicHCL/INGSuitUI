@@ -14,8 +14,9 @@
   <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" href="overview/overview.css">
+  <link rel="stylesheet" href="monitoring/monitoring.css">
 </head>
-<body>
+<body ng-controller="mainCtrl">
   <div class="container">
     <div class="row">
       <header>
@@ -34,6 +35,10 @@
       </header>
     </div>
   </div>  
+
+  <button class="btn scroll-top" data-scroll="up" type="button" ng-click="scrollTop()">
+  ^
+  </button>
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

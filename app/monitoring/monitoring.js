@@ -8,5 +8,5 @@ angular.module('myApp.monitoring', ['ngRoute'])
 }])
 
 .controller('monitoringCtrl', function($scope, $http) {
-
+  $scope.productGroupList = products;
 });
